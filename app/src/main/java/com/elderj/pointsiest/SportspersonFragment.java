@@ -12,7 +12,7 @@ import android.widget.ImageView;
 
 public class SportspersonFragment extends Fragment {
 
-    private OnItemSelectedListener listener;
+//    private OnItemSelectedListener listener;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -29,26 +29,26 @@ public class SportspersonFragment extends Fragment {
         return view;
     }
 
-    public interface OnItemSelectedListener {
-        void onSportspersonSelected(String link);
-    }
+//    public interface OnItemSelectedListener {
+//        void onSportspersonSelected(String link);
+//    }
 
-    @Override
-    public void onAttach(Context context) {
-        super.onAttach(context);
-        if (context instanceof OnItemSelectedListener) {
-            listener = (OnItemSelectedListener) context;
-        } else {
-            throw new ClassCastException(context.toString()
-                    + " must implement SportspersonFragment.OnItemSelectedListener");
-        }
-    }
+//    @Override
+//    public void onAttach(Context context) {
+//        super.onAttach(context);
+//        if (context instanceof OnItemSelectedListener) {
+//            listener = (OnItemSelectedListener) context;
+//        } else {
+//            throw new ClassCastException(context.toString()
+//                    + " must implement SportspersonFragment.OnItemSelectedListener");
+//        }
+//    }
 
     // triggers update of the details fragment
-    public void updateDetail(String uri) {
-        // create fake data
-        String newTime = String.valueOf(System.currentTimeMillis());
-        // send data to activity
-        listener.onSportspersonSelected(newTime);
-    }
+//    public void updateDetail(String uri) {
+//        // create fake data
+//        String newTime = String.valueOf(System.currentTimeMillis());
+//        // send data to activity
+//        listener.onSportspersonSelected(newTime);
+//    }
 }

@@ -21,8 +21,8 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Random;
 
-public class MainActivity extends AppCompatActivity implements SportspersonFragment.OnItemSelectedListener {
-
+public class MainActivity extends AppCompatActivity //implements SportspersonFragment.OnItemSelectedListener {
+{
     TextView tvPlayerScore, tvGameScore;
     String json;
     JSONObject jsonObj;
@@ -98,13 +98,6 @@ public class MainActivity extends AppCompatActivity implements SportspersonFragm
                 readAndRenderScores();
             }
         });
-
-    }
-
-    @Override
-    public void onSportspersonSelected(String link) {
-
-        Log.d("linklinklink", link);
 
     }
 
