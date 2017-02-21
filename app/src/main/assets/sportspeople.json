@@ -1,0 +1,164 @@
+{
+    "sportspeople": [
+        {
+            "first_name": "Stephen", 
+            "full_name": "Stephen Curry", 
+            "id": 1, 
+            "last_name": "Curry", 
+            "points": 47.94303797468354, 
+            "profile_picture_url": "https://d17odppiik753x.cloudfront.net/playerimages/nba/9524.png"
+        }, 
+        {
+            "first_name": "Draymond", 
+            "full_name": "Draymond Green", 
+            "id": 2, 
+            "last_name": "Green", 
+            "points": 38.9604938271605, 
+            "profile_picture_url": "https://d17odppiik753x.cloudfront.net/playerimages/nba/15860.png"
+        }, 
+        {
+            "first_name": "Damian", 
+            "full_name": "Damian Lillard", 
+            "id": 3, 
+            "last_name": "Lillard", 
+            "points": 39.37866666666667, 
+            "profile_picture_url": "https://d17odppiik753x.cloudfront.net/playerimages/nba/20848.png"
+        }, 
+        {
+            "first_name": "Hassan", 
+            "full_name": "Hassan Whiteside", 
+            "id": 4, 
+            "last_name": "Whiteside", 
+            "points": 35.75342465753425, 
+            "profile_picture_url": "https://d17odppiik753x.cloudfront.net/playerimages/nba/12363.png"
+        }, 
+        {
+            "first_name": "Klay", 
+            "full_name": "Klay Thompson", 
+            "id": 5, 
+            "last_name": "Thompson", 
+            "points": 30.839999999999996, 
+            "profile_picture_url": "https://d17odppiik753x.cloudfront.net/playerimages/nba/14509.png"
+        }, 
+        {
+            "first_name": "Kyle", 
+            "full_name": "Kyle Lowry", 
+            "id": 6, 
+            "last_name": "Lowry", 
+            "points": 38.5974025974026, 
+            "profile_picture_url": "https://d17odppiik753x.cloudfront.net/playerimages/nba/9535.png"
+        }, 
+        {
+            "first_name": "Dwyane", 
+            "full_name": "Dwyane Wade", 
+            "id": 7, 
+            "last_name": "Wade", 
+            "points": 31.43783783783784, 
+            "profile_picture_url": "https://d17odppiik753x.cloudfront.net/playerimages/nba/9585.png"
+        }, 
+        {
+            "first_name": "DeMar", 
+            "full_name": "DeMar DeRozan", 
+            "id": 8, 
+            "last_name": "DeRozan", 
+            "points": 35.26025641025641, 
+            "profile_picture_url": "https://d17odppiik753x.cloudfront.net/playerimages/nba/9714.png"
+        }, 
+        {
+            "first_name": "C.J.", 
+            "full_name": "C.J. McCollum", 
+            "id": 9, 
+            "last_name": "McCollum", 
+            "points": 31.653750000000002, 
+            "profile_picture_url": "https://d17odppiik753x.cloudfront.net/playerimages/nba/19067.png"
+        }, 
+        {
+            "first_name": "Chris", 
+            "full_name": "Chris Bosh", 
+            "id": 10, 
+            "last_name": "Bosh", 
+            "points": 32.679245283018865, 
+            "profile_picture_url": "https://d17odppiik753x.cloudfront.net/playerimages/nba/9718.png"
+        }, 
+        {
+            "first_name": "Luol", 
+            "full_name": "Luol Deng", 
+            "id": 11, 
+            "last_name": "Deng", 
+            "points": 24.02162162162162, 
+            "profile_picture_url": "https://d17odppiik753x.cloudfront.net/playerimages/nba/9479.png"
+        }, 
+        {
+            "first_name": "Goran", 
+            "full_name": "Goran Dragic", 
+            "id": 12, 
+            "last_name": "Dragic", 
+            "points": 27.359722222222224, 
+            "profile_picture_url": "https://d17odppiik753x.cloudfront.net/playerimages/nba/9673.png"
+        }, 
+        {
+            "first_name": "Mason", 
+            "full_name": "Mason Plumlee", 
+            "id": 13, 
+            "last_name": "Plumlee", 
+            "points": 24.31219512195122, 
+            "profile_picture_url": "https://d17odppiik753x.cloudfront.net/playerimages/nba/15590.png"
+        }, 
+        {
+            "first_name": "Jonas", 
+            "full_name": "Jonas Valanciunas", 
+            "id": 14, 
+            "last_name": "Valanciunas", 
+            "points": 26.873333333333335, 
+            "profile_picture_url": "https://d17odppiik753x.cloudfront.net/playerimages/nba/14503.png"
+        }, 
+        {
+            "first_name": "Al-Farouq", 
+            "full_name": "Al-Farouq Aminu", 
+            "id": 15, 
+            "last_name": "Aminu", 
+            "points": 21.64390243902439, 
+            "profile_picture_url": "https://d17odppiik753x.cloudfront.net/playerimages/nba/12342.png"
+        }, 
+        {
+            "first_name": "Maurice", 
+            "full_name": "Maurice Harkless", 
+            "id": 16, 
+            "last_name": "Harkless", 
+            "points": 13.33974358974359, 
+            "profile_picture_url": "https://d17odppiik753x.cloudfront.net/playerimages/nba/16178.png"
+        }, 
+        {
+            "first_name": "Joe", 
+            "full_name": "Joe Johnson", 
+            "id": 17, 
+            "last_name": "Johnson", 
+            "points": 22.103703703703705, 
+            "profile_picture_url": "https://d17odppiik753x.cloudfront.net/playerimages/nba/9447.png"
+        }, 
+        {
+            "first_name": "Shaun", 
+            "full_name": "Shaun Livingston", 
+            "id": 18, 
+            "last_name": "Livingston", 
+            "points": 14.567948717948717, 
+            "profile_picture_url": "https://d17odppiik753x.cloudfront.net/playerimages/nba/9643.png"
+        }, 
+        {
+            "first_name": "Andrew", 
+            "full_name": "Andrew Bogut", 
+            "id": 19, 
+            "last_name": "Bogut", 
+            "points": 20.27714285714286, 
+            "profile_picture_url": "https://d17odppiik753x.cloudfront.net/playerimages/nba/9601.png"
+        }, 
+        {
+            "first_name": "DeMarre", 
+            "full_name": "DeMarre Carroll", 
+            "id": 20, 
+            "last_name": "Carroll", 
+            "points": 20.957692307692305, 
+            "profile_picture_url": "https://d17odppiik753x.cloudfront.net/playerimages/nba/9787.png"
+        }
+    ]
+}

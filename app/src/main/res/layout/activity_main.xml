@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    >
+
+    <!-- SCORES -->
+    <TextView
+        android:id="@+id/scores_title"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="@string/scores"
+        style="?android:listSeparatorTextViewStyle"
+        />
+
+    <TextView
+        android:id="@+id/player_score_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/scores_title"
+        android:text="@string/player_score"
+        />
+
+    <TextView
+        android:id="@+id/player_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/scores_title"
+        android:layout_alignRight="@id/player_score_title"
+        />
+
+    <TextView
+        android:id="@+id/game_score_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/player_score_title"
+        android:text="@string/game_score"
+        />
+
+    <TextView
+        android:id="@+id/game_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/player_score_title"
+        android:layout_alignRight="@id/game_score_title"
+        />
+
+    <Button
+        android:id="@+id/reset_scores"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="@string/reset_scores"
+        />
+
+    <View
+        android:id="@+id/scores_rule"
+        android:layout_below="@id/game_score"
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:layout_margin="5dp"
+        android:background="#c0c0c0"
+        />
+
+
+    <!-- PLAYERS -->
+    <ImageView
+        android:id="@+id/person_1_image"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_below="@id/scores_rule"
+        android:layout_centerHorizontal="true"
+        android:onClick="onClick"
+        />
+        <!--style="@style/PeopleTheme"-->
+
+
+    <TextView
+        android:id="@+id/person_1_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:layout_below="@id/person_1_image"
+        android:layout_centerHorizontal="true"
+        />
+        <!--style="@style/PeopleTheme"-->
+
+
+    <!--<TextView-->
+        <!--android:id="@+id/person_1_name_title"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--style="@style/PeopleTheme"-->
+        <!--android:layout_below="@id/person_1_image"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:text="@string/person_1_name_title"-->
+        <!--/>-->
+
+
+    <ImageView
+        android:id="@+id/person_2_image"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_below="@id/person_1_name"
+        android:layout_centerHorizontal="true"
+        android:onClick="onClick"
+        />
+        <!--style="@style/PeopleTheme"-->
+
+
+    <!--<TextView-->
+        <!--android:id="@+id/person_2_name_title"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--style="@style/PeopleTheme"-->
+        <!--android:layout_below="@id/person_1_image"-->
+        <!--android:layout_toRightOf="@id/person_1_image"-->
+        <!--android:text="@string/person_1_name_title"-->
+        <!--/>-->
+
+    <TextView
+        android:id="@+id/person_2_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/person_2_image"
+        android:layout_centerHorizontal="true"
+        />
+        <!--style="@style/PeopleTheme"-->
+
+
+    <!--<View-->
+        <!--android:id="@+id/person_images_rule"-->
+        <!--android:layout_below="@id/people"-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="2dp"-->
+        <!--android:layout_margin="5dp"-->
+        <!--android:background="#c0c0c0"-->
+        <!--/>-->
+
+</RelativeLayout>

@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Pointsiest</string>
+
+    <string name="scores">Scores</string>
+    <string name="player_score">Player:</string>
+    <string name="game_score">Game:</string>
+    <string name="person_1_name_title">Name:</string>
+    <string name="reset_scores">Reset scores</string>
+
+
+</resources>
