@@ -3,6 +3,7 @@ package com.elderj.pointsiest;
 import android.app.Fragment;
 import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,7 +23,7 @@ public class SportspersonFragment extends Fragment {
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                updateDetail("fake");
+                Log.d("sportsperson fragment", v.getTag().toString());
             }
         });
         return view;

@@ -10,9 +10,9 @@
         android:layout_height="150dp"
         android:layout_below="@id/scores_rule"
         android:layout_centerHorizontal="true"
-        android:onClick="onClick"
-        />
 
+        />
+    <!--android:onClick="onClick"-->
 
     <TextView
         android:id="@+id/person_1_name"

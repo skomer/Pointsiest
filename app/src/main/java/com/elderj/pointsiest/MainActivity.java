@@ -69,6 +69,8 @@ public class MainActivity extends AppCompatActivity implements SportspersonFragm
         person1Name.setText(sportsperson1.getFullName());
         String pic1Url = sportsperson1.getProfilePicUrl();
         ImageView person1Image = (ImageView) findViewById(R.id.person_1_image);
+        double points = sportsperson1.getPoints();
+        person1Image.setTag(points);
 
         Ion.with(person1Image)
 //                .placeholder(R.drawable.placeholder_image)
@@ -180,9 +182,6 @@ public class MainActivity extends AppCompatActivity implements SportspersonFragm
         return rand;
     }
 
-    public void onClick(View view) {
-        Log.d("view", view.toString());
-    }
 
 
 }
