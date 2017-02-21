@@ -21,7 +21,7 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Random;
 
-public class MainActivity extends AppCompatActivity implements {
+public class MainActivity extends AppCompatActivity implements SportspersonFragment.OnItemSelectedListener {
 
     TextView tvPlayerScore, tvGameScore;
     String json;
@@ -77,17 +77,17 @@ public class MainActivity extends AppCompatActivity implements {
 //                .animateIn(fadeInAnimation)
                 .load(pic1Url);
 
-        TextView person2name = (TextView) findViewById(R.id.person_2_name);
-        person2name.setText(sportsperson2.getFullName());
-        String pic2Url = sportsperson2.getProfilePicUrl();
-        ImageView person2Image = (ImageView) findViewById(R.id.person_2_image);
-
-        Ion.with(person2Image)
-//                .placeholder(R.drawable.placeholder_image)
-//                .error(R.drawable.error_image)
-//                .animateLoad(spinAnimation)
-//                .animateIn(fadeInAnimation)
-                .load(pic2Url);
+//        TextView person2name = (TextView) findViewById(R.id.person_2_name);
+//        person2name.setText(sportsperson2.getFullName());
+//        String pic2Url = sportsperson2.getProfilePicUrl();
+//        ImageView person2Image = (ImageView) findViewById(R.id.person_2_image);
+//
+//        Ion.with(person2Image)
+////                .placeholder(R.drawable.placeholder_image)
+////                .error(R.drawable.error_image)
+////                .animateLoad(spinAnimation)
+////                .animateIn(fadeInAnimation)
+//                .load(pic2Url);
 
         resetScores.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -96,6 +96,13 @@ public class MainActivity extends AppCompatActivity implements {
                 readAndRenderScores();
             }
         });
+
+    }
+
+    @Override
+    public void onSportspersonSelected(String link) {
+
+        Log.d("linklinklink", link);
 
     }
 

@@ -68,9 +68,11 @@
 
     <fragment
         android:id="@+id/sportspersonFragment"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_weight="1"
         android:layout_height="match_parent"
+        android:layout_below="@id/scores_rule"
+        android:layout_centerHorizontal="true"
         class="com.elderj.pointsiest.SportspersonFragment"
         tools:layout="@layout/fragment_sportsperson">
     </fragment>
