@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity //implements SportspersonFra
         json = loadJsonFromFile();
         sPeople = makeArrayListJsonObjects();
 
-        listView = (ListView)findViewById(R.id.)
+        listView = (ListView)findViewById(R.id.sportsperson_listview);
 
 
         int noOfsPeople = sPeople.size();
@@ -70,19 +70,19 @@ public class MainActivity extends AppCompatActivity //implements SportspersonFra
         Sportsperson sportsperson2 = createSportspersonObject(rand2);
 
         // set up sportspeople areas
-        TextView person1Name = (TextView) findViewById(R.id.person_1_name);
-        person1Name.setText(sportsperson1.getFullName());
-        String pic1Url = sportsperson1.getProfilePicUrl();
-        ImageView person1Image = (ImageView) findViewById(R.id.person_1_image);
-        double points = sportsperson1.getPoints();
-        person1Image.setTag(points);
-
-        Ion.with(person1Image)
-//                .placeholder(R.drawable.placeholder_image)
-//                .error(R.drawable.error_image)
-//                .animateLoad(spinAnimation)
-//                .animateIn(fadeInAnimation)
-                .load(pic1Url);
+//        TextView person1Name = (TextView) findViewById(R.id.person_1_name);
+//        person1Name.setText(sportsperson1.getFullName());
+//        String pic1Url = sportsperson1.getProfilePicUrl();
+//        ImageView person1Image = (ImageView) findViewById(R.id.person_1_image);
+//        double points = sportsperson1.getPoints();
+//        person1Image.setTag(points);
+//
+//        Ion.with(person1Image)
+////                .placeholder(R.drawable.placeholder_image)
+////                .error(R.drawable.error_image)
+////                .animateLoad(spinAnimation)
+////                .animateIn(fadeInAnimation)
+//                .load(pic1Url);
 
 //        TextView person2name = (TextView) findViewById(R.id.person_2_name);
 //        person2name.setText(sportsperson2.getFullName());
