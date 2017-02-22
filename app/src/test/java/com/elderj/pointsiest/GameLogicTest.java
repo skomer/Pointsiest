@@ -10,6 +10,8 @@ import static org.junit.Assert.*;
 
 public class GameLogicTest {
 
+    public static ArrayList<Sportsperson> sportspeople;
+
     @Before
     public void before() {
         Sportsperson moFarah = new Sportsperson(
@@ -36,8 +38,10 @@ public class GameLogicTest {
     }
 
     @Test
-    public void gameCanTellWhichSportspersonHasMostPoints() {
+    public void gameCorrectlyJudgesPointsiestSportsperson() {
+//        Object
 
+        assertTrue(GameLogic.checkWinner(sportspeople, "99"));
 
 
     }

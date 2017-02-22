@@ -21,7 +21,7 @@ public class GameLogic {
     public static boolean checkWinner(ArrayList<Sportsperson> sportspeople, Object selectedId) {
 
 
-        return true;
+        return false;
 
     }
 
