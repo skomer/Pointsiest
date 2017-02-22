@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import com.koushikdutta.ion.Ion;
@@ -32,6 +33,7 @@ public class MainActivity extends AppCompatActivity //implements SportspersonFra
     Button resetScores;
     ImageView person1;
     ImageView person2;
+    ListView listView;
 
 //    public static final String PointsiestPREFERENCES = "PointsiestPrefs";
     public static final String pScore = "playerScoreKey";
@@ -54,6 +56,9 @@ public class MainActivity extends AppCompatActivity //implements SportspersonFra
 
         json = loadJsonFromFile();
         sPeople = makeArrayListJsonObjects();
+
+        listView = (ListView)findViewById(R.id.)
+
 
         int noOfsPeople = sPeople.size();
         int rand1 = getRandomNumber(noOfsPeople);
