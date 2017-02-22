@@ -10,6 +10,8 @@ public class Sportsperson {
     private double points;
     private String profilePicUrl;
 
+    public Sportsperson() {}
+
     public Sportsperson(
             String firstName,
             String lastName,

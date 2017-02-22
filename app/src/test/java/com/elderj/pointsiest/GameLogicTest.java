@@ -9,12 +9,14 @@ import static org.junit.Assert.*;
 
 
 public class GameLogicTest {
-
-    public static ArrayList<Sportsperson> sportspeople;
+    
+    Sportsperson moFarah = new Sportsperson();
+    Sportsperson peytonManning = new Sportsperson();
+    ArrayList<Sportsperson> sportspeople = new ArrayList<>();
 
     @Before
     public void before() {
-        Sportsperson moFarah = new Sportsperson(
+        moFarah = new Sportsperson(
                 "Mo",
                 "Farah",
                 "Mo Farah",
@@ -23,7 +25,7 @@ public class GameLogicTest {
                 "mo farah profile pic url"
         );
 
-        Sportsperson peytonManning = new Sportsperson(
+        peytonManning = new Sportsperson(
                 "Peyton",
                 "Manning",
                 "Peyton Manning",
@@ -32,18 +34,14 @@ public class GameLogicTest {
                 "peyton manning profile pic url"
         );
 
-        ArrayList<Sportsperson> sportspeople = new ArrayList<>();
         sportspeople.add(moFarah);
         sportspeople.add(peytonManning);
     }
 
     @Test
     public void gameCorrectlyJudgesPointsiestSportsperson() {
-//        Object
-
-        assertTrue(GameLogic.checkWinner(sportspeople, "99"));
-
-
+        int selectedId = moFarah.getId();
+        assertTrue(GameLogic.checkPointsiest(sportspeople, selectedId));
     }
 
 

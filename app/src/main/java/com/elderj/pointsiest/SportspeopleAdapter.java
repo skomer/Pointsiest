@@ -50,8 +50,9 @@ public class SportspeopleAdapter extends ArrayAdapter<Sportsperson> {
         personImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Object selectedId = v.getTag();
-                GameLogic.checkWinner(sportspeople, selectedId);
+                Object idObject = v.getTag();
+                int selectedId = (Integer) idObject;
+                GameLogic.checkPointsiest(sportspeople, selectedId);
             }
         });
 
