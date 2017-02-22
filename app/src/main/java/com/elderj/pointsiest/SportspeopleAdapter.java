@@ -1,6 +1,8 @@
 package com.elderj.pointsiest;
 
 import android.content.Context;
+import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -34,12 +36,36 @@ public class SportspeopleAdapter extends ArrayAdapter<Sportsperson> {
 //                .animateLoad(spinAnimation)
 //                .animateIn(fadeInAnimation)
                 .load(picUrl);
+        double points = sportsperson.getPoints();
+        personImage.setTag(points);
+
 
         TextView personName = (TextView) convertView.findViewById(R.id.person_name);
         personName.setText(sportsperson.getFullName());
 
+        personImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d("sportspeople adapter", v.getTag().toString());
+            }
+        });
+
+
+
         return convertView;
     }
+
+//    @Override
+//    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+//        View view = inflater.inflate(R.layout.fragment_sportsperson, container, false);
+//        ImageView imageView = (ImageView) view.findViewById(R.id.person_image);
+//        imageView.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Log.d("sportspeople adapter", v.getTag().toString());
+//            }
+//        });
+//        return view;
 
 
 }
