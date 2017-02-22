@@ -18,8 +18,12 @@ import java.util.ArrayList;
 
 public class SportspeopleAdapter extends ArrayAdapter<Sportsperson> {
 
+    ArrayList<Sportsperson> sportspeople;
+
+
     public SportspeopleAdapter(Context context, ArrayList<Sportsperson> sportspeople) {
         super(context, 0, sportspeople);
+        this.sportspeople = sportspeople;
     }
 
     @Override
@@ -36,8 +40,8 @@ public class SportspeopleAdapter extends ArrayAdapter<Sportsperson> {
 //                .animateLoad(spinAnimation)
 //                .animateIn(fadeInAnimation)
                 .load(picUrl);
-        double points = sportsperson.getPoints();
-        personImage.setTag(points);
+        int id = sportsperson.getId();
+        personImage.setTag(id);
 
 
         TextView personName = (TextView) convertView.findViewById(R.id.person_name);
@@ -46,26 +50,12 @@ public class SportspeopleAdapter extends ArrayAdapter<Sportsperson> {
         personImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d("sportspeople adapter", v.getTag().toString());
+                Object selectedId = v.getTag();
+                GameLogic.checkWinner(sportspeople, selectedId);
             }
         });
 
-
-
         return convertView;
     }
-
-//    @Override
-//    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-//        View view = inflater.inflate(R.layout.fragment_sportsperson, container, false);
-//        ImageView imageView = (ImageView) view.findViewById(R.id.person_image);
-//        imageView.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Log.d("sportspeople adapter", v.getTag().toString());
-//            }
-//        });
-//        return view;
-
 
 }
