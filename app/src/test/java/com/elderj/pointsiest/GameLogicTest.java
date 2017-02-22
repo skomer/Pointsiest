@@ -9,7 +9,7 @@ import static org.junit.Assert.*;
 
 
 public class GameLogicTest {
-    
+
     Sportsperson moFarah = new Sportsperson();
     Sportsperson peytonManning = new Sportsperson();
     ArrayList<Sportsperson> sportspeople = new ArrayList<>();
@@ -39,9 +39,15 @@ public class GameLogicTest {
     }
 
     @Test
-    public void gameCorrectlyJudgesPointsiestSportsperson() {
+    public void gameCorrectlyJudgesPointsiest() {
         int selectedId = moFarah.getId();
         assertTrue(GameLogic.checkPointsiest(sportspeople, selectedId));
+    }
+
+    @Test
+    public void gameCorrectlyJudgesUnpointsiest() {
+        int selectedId = peytonManning.getId();
+        assertFalse(GameLogic.checkPointsiest(sportspeople, selectedId));
     }
 
 
