@@ -7,11 +7,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
-
-import com.koushikdutta.ion.Ion;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -22,8 +19,8 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Random;
 
-public class MainActivity extends AppCompatActivity //implements SportspersonFragment.OnItemSelectedListener {
-{
+public class MainActivity extends AppCompatActivity {
+
     TextView tvPlayerScore, tvGameScore;
     String json;
     JSONObject jsonObj;
@@ -31,8 +28,6 @@ public class MainActivity extends AppCompatActivity //implements SportspersonFra
     InputStream inputStream;
     ArrayList<JSONObject> sPeople;
     Button resetScores;
-//    ImageView person1;
-//    ImageView person2;
     ListView listView;
 
 //    public static final String PointsiestPREFERENCES = "PointsiestPrefs";

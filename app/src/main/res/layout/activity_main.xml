@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="10dp"
     >
 
-    <!-- SCORES -->
     <TextView
         android:id="@+id/scores_title"
         android:layout_height="wrap_content"
@@ -73,91 +71,5 @@
         android:layout_below="@id/scores_rule"
         />
 
-    <!--<fragment-->
-        <!--android:id="@+id/sportspersonFragment"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="match_parent"-->
-        <!--android:layout_below="@id/scores_rule"-->
-        <!--android:layout_centerHorizontal="true"-->
-        <!--class="com.elderj.pointsiest.SportspersonFragment"-->
-        <!--tools:layout="@layout/fragment_sportsperson">-->
-    <!--</fragment>-->
-
-
-
-
-    <!-- PLAYERS -->
-    <!--<ImageView-->
-        <!--android:id="@+id/person_1_image"-->
-        <!--android:layout_width="150dp"-->
-        <!--android:layout_height="150dp"-->
-        <!--android:layout_below="@id/scores_rule"-->
-        <!--android:layout_centerHorizontal="true"-->
-        <!--android:onClick="onClick"-->
-        <!--/>-->
-        <!--&lt;!&ndash;style="@style/PeopleTheme"&ndash;&gt;-->
-
-
-    <!--<TextView-->
-        <!--android:id="@+id/person_1_name"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_marginBottom="50dp"-->
-        <!--android:layout_below="@id/person_1_image"-->
-        <!--android:layout_centerHorizontal="true"-->
-        <!--/>-->
-        <!--&lt;!&ndash;style="@style/PeopleTheme"&ndash;&gt;-->
-
-
-    <!--&lt;!&ndash;<TextView&ndash;&gt;-->
-        <!--&lt;!&ndash;android:id="@+id/person_1_name_title"&ndash;&gt;-->
-        <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
-        <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
-        <!--&lt;!&ndash;style="@style/PeopleTheme"&ndash;&gt;-->
-        <!--&lt;!&ndash;android:layout_below="@id/person_1_image"&ndash;&gt;-->
-        <!--&lt;!&ndash;android:layout_centerHorizontal="true"&ndash;&gt;-->
-        <!--&lt;!&ndash;android:text="@string/person_1_name_title"&ndash;&gt;-->
-        <!--&lt;!&ndash;/>&ndash;&gt;-->
-
-
-    <!--<ImageView-->
-        <!--android:id="@+id/person_2_image"-->
-        <!--android:layout_width="150dp"-->
-        <!--android:layout_height="150dp"-->
-        <!--android:layout_below="@id/person_1_name"-->
-        <!--android:layout_centerHorizontal="true"-->
-        <!--android:onClick="onClick"-->
-        <!--/>-->
-        <!--&lt;!&ndash;style="@style/PeopleTheme"&ndash;&gt;-->
-
-
-    <!--&lt;!&ndash;<TextView&ndash;&gt;-->
-        <!--&lt;!&ndash;android:id="@+id/person_2_name_title"&ndash;&gt;-->
-        <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
-        <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
-        <!--&lt;!&ndash;style="@style/PeopleTheme"&ndash;&gt;-->
-        <!--&lt;!&ndash;android:layout_below="@id/person_1_image"&ndash;&gt;-->
-        <!--&lt;!&ndash;android:layout_toRightOf="@id/person_1_image"&ndash;&gt;-->
-        <!--&lt;!&ndash;android:text="@string/person_1_name_title"&ndash;&gt;-->
-        <!--&lt;!&ndash;/>&ndash;&gt;-->
-
-    <!--<TextView-->
-        <!--android:id="@+id/person_2_name"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_below="@id/person_2_image"-->
-        <!--android:layout_centerHorizontal="true"-->
-        <!--/>-->
-        <!--&lt;!&ndash;style="@style/PeopleTheme"&ndash;&gt;-->
-
-
-    <!--&lt;!&ndash;<View&ndash;&gt;-->
-        <!--&lt;!&ndash;android:id="@+id/person_images_rule"&ndash;&gt;-->
-        <!--&lt;!&ndash;android:layout_below="@id/people"&ndash;&gt;-->
-        <!--&lt;!&ndash;android:layout_width="fill_parent"&ndash;&gt;-->
-        <!--&lt;!&ndash;android:layout_height="2dp"&ndash;&gt;-->
-        <!--&lt;!&ndash;android:layout_margin="5dp"&ndash;&gt;-->
-        <!--&lt;!&ndash;android:background="#c0c0c0"&ndash;&gt;-->
-        <!--&lt;!&ndash;/>&ndash;&gt;-->
 
 </RelativeLayout>
