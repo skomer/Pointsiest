@@ -75,6 +75,7 @@ public class MainActivity extends AppCompatActivity //implements SportspersonFra
 
         SportspeopleAdapter adapter = new SportspeopleAdapter(this, sportspeople);
 
+        listView.setAdapter(adapter);
 
         resetScores.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -26,7 +26,7 @@ public class SportspeopleAdapter extends ArrayAdapter<Sportsperson> {
         if (convertView == null) {
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.activity_single_sportsperson, parent, false);
         }
-        ImageView personImage = (ImageView) convertView.findViewById(R.id.personImage);
+        ImageView personImage = (ImageView) convertView.findViewById(R.id.person_image);
         String picUrl = sportsperson.getProfilePicUrl();
         Ion.with(personImage)
 //                .placeholder(R.drawable.placeholder_image)
@@ -35,7 +35,7 @@ public class SportspeopleAdapter extends ArrayAdapter<Sportsperson> {
 //                .animateIn(fadeInAnimation)
                 .load(picUrl);
 
-        TextView personName = (TextView) convertView.findViewById(R.id.personName);
+        TextView personName = (TextView) convertView.findViewById(R.id.person_name);
         personName.setText(sportsperson.getFullName());
 
         return convertView;
