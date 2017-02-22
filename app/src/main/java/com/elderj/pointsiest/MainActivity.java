@@ -31,8 +31,8 @@ public class MainActivity extends AppCompatActivity //implements SportspersonFra
     InputStream inputStream;
     ArrayList<JSONObject> sPeople;
     Button resetScores;
-    ImageView person1;
-    ImageView person2;
+//    ImageView person1;
+//    ImageView person2;
     ListView listView;
 
 //    public static final String PointsiestPREFERENCES = "PointsiestPrefs";

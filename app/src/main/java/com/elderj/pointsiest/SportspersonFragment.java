@@ -19,7 +19,7 @@ public class SportspersonFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_sportsperson,
                 container, false);
-        ImageView imageView = (ImageView) view.findViewById(R.id.person_1_image);
+        ImageView imageView = (ImageView) view.findViewById(R.id.person_image);
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
