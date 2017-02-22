@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity //implements SportspersonFra
         json = loadJsonFromFile();
         sPeople = makeArrayListJsonObjects();
 
-        listView = (ListView)findViewById(R.id.sportsperson_listview);
+        listView = (ListView)findViewById(R.id.sperson_listview);
 
 
         int noOfsPeople = sPeople.size();
@@ -66,35 +66,15 @@ public class MainActivity extends AppCompatActivity //implements SportspersonFra
         while (rand2 == rand1) {
             rand2 = getRandomNumber(noOfsPeople);
         }
-        Sportsperson sportsperson1 = createSportspersonObject(rand1);
-        Sportsperson sportsperson2 = createSportspersonObject(rand2);
+        Sportsperson sperson1 = createsPersonObject(rand1);
+        Sportsperson sperson2 = createsPersonObject(rand2);
 
-        // set up sportspeople areas
-//        TextView person1Name = (TextView) findViewById(R.id.person_1_name);
-//        person1Name.setText(sportsperson1.getFullName());
-//        String pic1Url = sportsperson1.getProfilePicUrl();
-//        ImageView person1Image = (ImageView) findViewById(R.id.person_1_image);
-//        double points = sportsperson1.getPoints();
-//        person1Image.setTag(points);
-//
-//        Ion.with(person1Image)
-////                .placeholder(R.drawable.placeholder_image)
-////                .error(R.drawable.error_image)
-////                .animateLoad(spinAnimation)
-////                .animateIn(fadeInAnimation)
-//                .load(pic1Url);
+        ArrayList<Sportsperson> sportspeople = new ArrayList<>();
+        sportspeople.add(sperson1);
+        sportspeople.add(sperson2);
 
-//        TextView person2name = (TextView) findViewById(R.id.person_2_name);
-//        person2name.setText(sportsperson2.getFullName());
-//        String pic2Url = sportsperson2.getProfilePicUrl();
-//        ImageView person2Image = (ImageView) findViewById(R.id.person_2_image);
-//
-//        Ion.with(person2Image)
-////                .placeholder(R.drawable.placeholder_image)
-////                .error(R.drawable.error_image)
-////                .animateLoad(spinAnimation)
-////                .animateIn(fadeInAnimation)
-//                .load(pic2Url);
+        SportspeopleAdapter adapter = new SportspeopleAdapter(this, sportspeople);
+
 
         resetScores.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -156,7 +136,7 @@ public class MainActivity extends AppCompatActivity //implements SportspersonFra
         }
     }
 
-    public Sportsperson createSportspersonObject(int index) {
+    public Sportsperson createsPersonObject(int index) {
         JSONObject sPerson = sPeople.get(index);
         try {
             String firstName = sPerson.getString("first_name");
