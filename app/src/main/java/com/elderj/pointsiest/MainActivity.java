@@ -100,6 +100,18 @@ public class MainActivity extends AppCompatActivity {
         gameScoreView.setText(Integer.toString(gScore));
     }
 
+    public void incrementScores(boolean playerWin) {
+        readScores();
+        if (playerWin == true) {
+            pScore += 1;
+        } else {
+            gScore += 1;
+        }
+        saveScores();
+        readScores();
+        renderScores();
+    }
+
     public void saveScores() {
         SharedPreferences.Editor editor = sharedPrefs.edit();
         editor.putInt(pScoreKey, pScore);

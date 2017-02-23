@@ -6,9 +6,6 @@ import java.util.ArrayList;
 
 public class GameLogic {
 
-
-
-
     public static boolean checkPointsiest(ArrayList<Sportsperson> sportspeople, int selectedId) {
 
         double selectedPoints = 0.0;
@@ -30,5 +27,12 @@ public class GameLogic {
         return false;
 
     }
+
+    // pop up window declaring result
+    // show button to say close this window/new round
+    // increment scores
+
+
+
 
 }
