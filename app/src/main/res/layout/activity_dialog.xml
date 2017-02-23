@@ -1,24 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="10dp" >
-
 
     <TextView
         android:id="@+id/game_result"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text=""
-        />
-
-    <Button
-        android:id="@+id/cancel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="2dp"
-        android:text="@string/cancel"
+        android:layout_centerHorizontal="true"
         />
 
     <Button
@@ -26,9 +18,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="2dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/game_result"
         android:text="@string/new_round"
         />
 
+    <Button
+        android:id="@+id/cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/new_round"
+        android:text="@string/cancel"
+        />
 
-</LinearLayout>
+</RelativeLayout>
 
