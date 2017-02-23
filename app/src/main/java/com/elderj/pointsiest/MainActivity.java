@@ -44,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
     public static final String pScoreKey = "playerScoreKey";
     public static final String gScoreKey = "gameScoreKey";
     SharedPreferences sharedPrefs;
+    String strGameResult;
 
 
     @Override
@@ -98,13 +99,14 @@ public class MainActivity extends AppCompatActivity {
 
                 boolean result = GameLogic.checkPointsiest(sportspeople, selectedId);
 
-                String strGameResult = String.valueOf(result);
+                if (result == true) {
+                    strGameResult = "Well done! You guessed the pointsiest sportsperson. You get a point.";
+                } else {
+                    strGameResult = "No, you guessed wrong. The game gets a point.";
+                }
 
                 tvGameResult.setText(strGameResult);
-
-//                gameResultDialog.setContentView(R.layout.activity_dialog);
                 gameResultDialog.show();
-
 
                 Button buttonCancel = (Button) dialogView.findViewById(R.id.cancel);
                 buttonCancel.setOnClickListener(new View.OnClickListener() {
@@ -114,6 +116,8 @@ public class MainActivity extends AppCompatActivity {
                     }
 
                 });
+
+                incrementScores(result);
 
             }
 
