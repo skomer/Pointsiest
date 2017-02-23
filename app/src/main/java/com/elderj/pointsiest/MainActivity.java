@@ -81,16 +81,24 @@ public class MainActivity extends AppCompatActivity {
         OnItemClickListener onListClick = new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id)
             {
-                Dialog dialog1 = new Dialog(MainActivity.this);
-                dialog1.setContentView(R.layout.activity_popup);
-                dialog1.show();
+                final Dialog gameResultDialog = new Dialog(MainActivity.this);
+                gameResultDialog.setContentView(R.layout.activity_popup);
+                gameResultDialog.show();
+                Button buttonCancel = (Button) gameResultDialog.findViewById(R.id.cancel);
+                buttonCancel.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        gameResultDialog.cancel();
+                    }
+
+                });
+
             }
 
         };
 
         listView.setOnItemClickListener(onListClick);
 
-        
 
 
 
