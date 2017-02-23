@@ -2,6 +2,7 @@ package com.elderj.pointsiest;
 
 import android.app.AlertDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -34,7 +35,6 @@ public class MainActivity extends AppCompatActivity {
     Button resetScores;
     ListView listView;
 
-//    public static final String PointsiestPREFERENCES = "PointsiestPrefs";
     public int pScore;
     public int gScore;
     ArrayList<Sportsperson> sportspeople;
@@ -113,6 +113,18 @@ public class MainActivity extends AppCompatActivity {
                     }
 
                 });
+
+                Button buttonNewRound = (Button) dialogView.findViewById(R.id.new_round);
+                buttonNewRound.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = getIntent();
+                        finish();
+                        startActivity(intent);
+                    }
+
+                });
+
 
                 incrementScores(result);
 

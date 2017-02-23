@@ -5,6 +5,8 @@
     <string name="player_score">Player:</string>
     <string name="game_score">Game:</string>
     <string name="reset_scores">Reset scores</string>
+    <string name="cancel">Cancel</string>
+    <string name="new_round">New round?</string>
 
 
 </resources>
