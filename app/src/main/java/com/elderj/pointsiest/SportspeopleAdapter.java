@@ -15,11 +15,9 @@ import com.koushikdutta.ion.Ion;
 import java.util.ArrayList;
 
 
-
 public class SportspeopleAdapter extends ArrayAdapter<Sportsperson> {
 
     ArrayList<Sportsperson> sportspeople;
-
 
     public SportspeopleAdapter(Context context, ArrayList<Sportsperson> sportspeople) {
         super(context, 0, sportspeople);
@@ -41,24 +39,10 @@ public class SportspeopleAdapter extends ArrayAdapter<Sportsperson> {
 //                .animateIn(fadeInAnimation)
                 .load(picUrl);
         int id = sportsperson.getId();
-        personImage.setTag(id);
-
+        convertView.setTag(id);
 
         TextView personName = (TextView) convertView.findViewById(R.id.person_name);
         personName.setText(sportsperson.getFullName());
-
-//        personImage.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Object idObject = v.getTag();
-//                int selectedId = (Integer) idObject;
-//                GameLogic.checkPointsiest(sportspeople, selectedId);
-//            }
-//        });
-
-
-
-
 
         return convertView;
     }

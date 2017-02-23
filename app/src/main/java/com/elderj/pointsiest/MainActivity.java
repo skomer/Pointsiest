@@ -1,15 +1,19 @@
 package com.elderj.pointsiest;
 
+import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.Layout;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -80,14 +84,17 @@ public class MainActivity extends AppCompatActivity {
 
 
         OnItemClickListener onListClick = new AdapterView.OnItemClickListener() {
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id)
-            {
-                final Dialog gameResultDialog = new Dialog(MainActivity.this);
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                View dialogView = getLayoutInflater().inflate( R.layout.activity_dialog, null );
+
+                final AlertDialog.Builder gameResultDialog = new AlertDialog.Builder(MainActivity.this);
+                gameResultDialog.setView(dialogView);
+
+                TextView tvGameResult = (TextView) dialogView.findViewById(R.id.game_result);
 
                 Object idObject = view.getTag();
                 int selectedId = (Integer) idObject;
-
-                TextView tvGameResult = (TextView) view.findViewById(R.id.game_result);
 
                 boolean result = GameLogic.checkPointsiest(sportspeople, selectedId);
 
@@ -95,15 +102,15 @@ public class MainActivity extends AppCompatActivity {
 
                 tvGameResult.setText(strGameResult);
 
-                gameResultDialog.setContentView(R.layout.activity_dialog);
+//                gameResultDialog.setContentView(R.layout.activity_dialog);
                 gameResultDialog.show();
 
 
-                Button buttonCancel = (Button) gameResultDialog.findViewById(R.id.cancel);
+                Button buttonCancel = (Button) dialogView.findViewById(R.id.cancel);
                 buttonCancel.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        gameResultDialog.cancel();
+//                        gameResultDialog.dismiss();
                     }
 
                 });
