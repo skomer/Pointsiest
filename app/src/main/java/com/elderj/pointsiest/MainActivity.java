@@ -53,38 +53,38 @@ public class MainActivity extends AppCompatActivity {
         tvGameScore = (TextView)findViewById(R.id.game_score);
         resetScores = (Button)findViewById(R.id.reset_scores);
 
+        // load scores from shared preferences, if they exist
         sharedPrefs = getPreferences(Context.MODE_PRIVATE);
-
         readScores();
         renderScores();
 
+        //
         json = loadJsonFromFile();
         sPeople = makeArrayListJsonObjects();
 
         listView = (ListView)findViewById(R.id.sperson_listview);
 
-
+        // generate numbers to create two random sportsperson objects
         int noOfsPeople = sPeople.size();
         int rand1 = getRandomNumber(noOfsPeople);
         int rand2 = rand1;
         while (rand2 == rand1) {
             rand2 = getRandomNumber(noOfsPeople);
         }
-        Sportsperson sperson1 = createsPersonObject(rand1);
-        Sportsperson sperson2 = createsPersonObject(rand2);
+        Sportsperson sPerson1 = createsPersonObject(rand1);
+        Sportsperson sPerson2 = createsPersonObject(rand2);
 
         sportspeople = new ArrayList<>();
-        sportspeople.add(sperson1);
-        sportspeople.add(sperson2);
+        sportspeople.add(sPerson1);
+        sportspeople.add(sPerson2);
 
         SportspeopleAdapter adapter = new SportspeopleAdapter(this, sportspeople);
         listView.setAdapter(adapter);
 
-
         OnItemClickListener onListClick = new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-                View dialogView = getLayoutInflater().inflate( R.layout.activity_dialog, null );
+                View dialogView = getLayoutInflater().inflate(R.layout.activity_dialog, null);
 
                 final AlertDialog gameResultDialog = new AlertDialog.Builder(MainActivity.this).create();
                 gameResultDialog.setView(dialogView);
@@ -111,7 +111,6 @@ public class MainActivity extends AppCompatActivity {
                     public void onClick(View v) {
                         gameResultDialog.cancel();
                     }
-
                 });
 
                 Button buttonNewRound = (Button) dialogView.findViewById(R.id.new_round);
@@ -122,18 +121,14 @@ public class MainActivity extends AppCompatActivity {
                         finish();
                         startActivity(intent);
                     }
-
                 });
 
-
                 incrementScores(result);
-
             }
 
         };
 
         listView.setOnItemClickListener(onListClick);
-
 
         resetScores.setOnClickListener(new View.OnClickListener() {
             @Override

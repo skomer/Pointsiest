@@ -7,9 +7,30 @@
     >
 
     <TextView
+        android:id="@+id/welcome_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/welcome_text"
+        android:padding="5dp"
+        />
+
+
+
+
+    <View
+        android:id="@+id/intro_rule"
+        android:layout_below="@id/welcome_text"
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:layout_margin="5dp"
+        android:background="#c0c0c0"
+        />
+
+    <TextView
         android:id="@+id/scores_title"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
+        android:layout_below="@id/intro_rule"
         android:text="@string/scores"
         style="?android:listSeparatorTextViewStyle"
         />
@@ -52,6 +73,8 @@
         android:id="@+id/reset_scores"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@id/welcome_text"
+        android:layout_marginTop="10dp"
         android:layout_alignParentRight="true"
         android:text="@string/reset_scores"
         />
