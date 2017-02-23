@@ -88,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
 
                 View dialogView = getLayoutInflater().inflate( R.layout.activity_dialog, null );
 
-                final AlertDialog.Builder gameResultDialog = new AlertDialog.Builder(MainActivity.this);
+                final AlertDialog gameResultDialog = new AlertDialog.Builder(MainActivity.this).create();
                 gameResultDialog.setView(dialogView);
 
                 TextView tvGameResult = (TextView) dialogView.findViewById(R.id.game_result);
@@ -110,7 +110,7 @@ public class MainActivity extends AppCompatActivity {
                 buttonCancel.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-//                        gameResultDialog.dismiss();
+                        gameResultDialog.cancel();
                     }
 
                 });
