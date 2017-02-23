@@ -4,7 +4,6 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
@@ -31,8 +30,10 @@ public class MainActivity extends AppCompatActivity {
     ListView listView;
 
 //    public static final String PointsiestPREFERENCES = "PointsiestPrefs";
-    public static final String pScore = "playerScoreKey";
-    public static final String gScore = "gameScoreKey";
+    public int pScore;
+    public int gScore;
+    public static final String pScoreKey = "playerScoreKey";
+    public static final String gScoreKey = "gameScoreKey";
     SharedPreferences sharedPrefs;
 
 
@@ -47,7 +48,8 @@ public class MainActivity extends AppCompatActivity {
 
         sharedPrefs = getPreferences(Context.MODE_PRIVATE);
 
-        readAndRenderScores();
+        readScores();
+        renderScores();
 
         json = loadJsonFromFile();
         sPeople = makeArrayListJsonObjects();
@@ -75,28 +77,33 @@ public class MainActivity extends AppCompatActivity {
         resetScores.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                saveScores(0, 0);
-                readAndRenderScores();
+                pScore = 0;
+                gScore = 0;
+                saveScores();
+                readScores();
+                renderScores();
             }
         });
 
     }
 
-
-    public void readAndRenderScores() {
-        int playerScore = sharedPrefs.getInt(pScore, 0);
-        TextView playerScoreView = tvPlayerScore;
-        playerScoreView.setText(Integer.toString(playerScore));
-
-        int gameScore = sharedPrefs.getInt(gScore, 0);
-        TextView gameScoreView = tvGameScore;
-        gameScoreView.setText(Integer.toString(gameScore));
+    public void readScores() {
+        pScore = sharedPrefs.getInt(pScoreKey, 0);
+        gScore = sharedPrefs.getInt(gScoreKey, 0);
     }
 
-    public void saveScores(int playerScore, int gameScore) {
+    public void renderScores() {
+        TextView playerScoreView = tvPlayerScore;
+        playerScoreView.setText(Integer.toString(pScore));
+
+        TextView gameScoreView = tvGameScore;
+        gameScoreView.setText(Integer.toString(gScore));
+    }
+
+    public void saveScores() {
         SharedPreferences.Editor editor = sharedPrefs.edit();
-        editor.putInt(pScore, playerScore);
-        editor.putInt(gScore, gameScore);
+        editor.putInt(pScoreKey, pScore);
+        editor.putInt(gScoreKey, gScore);
         editor.apply();
         // editor.commit();
     }
