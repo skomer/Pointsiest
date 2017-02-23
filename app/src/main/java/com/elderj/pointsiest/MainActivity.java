@@ -1,10 +1,14 @@
 package com.elderj.pointsiest;
 
+import android.app.Dialog;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -71,8 +75,27 @@ public class MainActivity extends AppCompatActivity {
         sportspeople.add(sperson2);
 
         SportspeopleAdapter adapter = new SportspeopleAdapter(this, sportspeople);
-
         listView.setAdapter(adapter);
+
+
+        OnItemClickListener onListClick = new AdapterView.OnItemClickListener() {
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id)
+            {
+                Dialog dialog1 = new Dialog(MainActivity.this);
+                dialog1.setContentView(R.layout.activity_popup);
+                dialog1.show();
+            }
+
+        };
+
+        listView.setOnItemClickListener(onListClick);
+
+        
+
+
+
+
+
 
         resetScores.setOnClickListener(new View.OnClickListener() {
             @Override

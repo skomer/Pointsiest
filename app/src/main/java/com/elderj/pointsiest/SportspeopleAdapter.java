@@ -47,14 +47,18 @@ public class SportspeopleAdapter extends ArrayAdapter<Sportsperson> {
         TextView personName = (TextView) convertView.findViewById(R.id.person_name);
         personName.setText(sportsperson.getFullName());
 
-        personImage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Object idObject = v.getTag();
-                int selectedId = (Integer) idObject;
-                GameLogic.checkPointsiest(sportspeople, selectedId);
-            }
-        });
+//        personImage.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Object idObject = v.getTag();
+//                int selectedId = (Integer) idObject;
+//                GameLogic.checkPointsiest(sportspeople, selectedId);
+//            }
+//        });
+
+
+
+
 
         return convertView;
     }

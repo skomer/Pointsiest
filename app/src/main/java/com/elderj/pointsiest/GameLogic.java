@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 public class GameLogic {
 
-    public static boolean checkPointsiest(ArrayList<Sportsperson> sportspeople, int selectedId) {
+    public static void checkPointsiest(ArrayList<Sportsperson> sportspeople, int selectedId) {
 
         double selectedPoints = 0.0;
         double notSelectedPoints = 0.0;
@@ -21,10 +21,14 @@ public class GameLogic {
             }
         }
 
-        if (selectedPoints > notSelectedPoints) {
-            return true;
-        }
-        return false;
+        GameResultPopUpActivity grpua = new GameResultPopUpActivity();
+
+        grpua.doThis();
+
+//        if (selectedPoints > notSelectedPoints) {
+//            return true;
+//        }
+//        return false;
 
     }
 
