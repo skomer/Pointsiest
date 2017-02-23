@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
 //    public static final String PointsiestPREFERENCES = "PointsiestPrefs";
     public int pScore;
     public int gScore;
+    ArrayList<Sportsperson> sportspeople;
     public static final String pScoreKey = "playerScoreKey";
     public static final String gScoreKey = "gameScoreKey";
     SharedPreferences sharedPrefs;
@@ -70,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
         Sportsperson sperson1 = createsPersonObject(rand1);
         Sportsperson sperson2 = createsPersonObject(rand2);
 
-        ArrayList<Sportsperson> sportspeople = new ArrayList<>();
+        sportspeople = new ArrayList<>();
         sportspeople.add(sperson1);
         sportspeople.add(sperson2);
 
@@ -82,8 +83,22 @@ public class MainActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id)
             {
                 final Dialog gameResultDialog = new Dialog(MainActivity.this);
-                gameResultDialog.setContentView(R.layout.activity_popup);
+
+                Object idObject = view.getTag();
+                int selectedId = (Integer) idObject;
+
+                TextView tvGameResult = (TextView) view.findViewById(R.id.game_result);
+
+                boolean result = GameLogic.checkPointsiest(sportspeople, selectedId);
+
+                String strGameResult = String.valueOf(result);
+
+                tvGameResult.setText(strGameResult);
+
+                gameResultDialog.setContentView(R.layout.activity_dialog);
                 gameResultDialog.show();
+
+
                 Button buttonCancel = (Button) gameResultDialog.findViewById(R.id.cancel);
                 buttonCancel.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -98,11 +113,6 @@ public class MainActivity extends AppCompatActivity {
         };
 
         listView.setOnItemClickListener(onListClick);
-
-
-
-
-
 
 
         resetScores.setOnClickListener(new View.OnClickListener() {
