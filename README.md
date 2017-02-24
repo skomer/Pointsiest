@@ -1,5 +1,3 @@
-
-
 ## The App
 The user selects which of two NBA player they think has the most points; a correct selected awards the user a point, while an incorrect selection awards the game a point.
 [Find the online repo here](https://www.github.com/skomer/pointsiest).
@@ -16,14 +14,14 @@ I also lost time to refactor some bulkier parts of the code; in particular MainA
 
 ## Learning
 * Android
-..* shared preferences
-..* fragments
-..* popup window
-..* alert dialog
-..* reading json
-..* layout inflater
-..* loading an image from a URL
+  * shared preferences
+  * fragments
+  * popup window
+  * alert dialog
+  * reading json
+  * layout inflater
+  * loading an image from a URL
 
 * General
-..* git directory tree
-..* the importance of backups and thorough version control!
+  * git directory tree
+  * the importance of backups and thorough version control!
