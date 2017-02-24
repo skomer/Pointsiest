@@ -1,5 +1,5 @@
-## The App
-The user selects which of two NBA player they think has the most points; a correct selected awards the user a point, while an incorrect selection awards the game a point.
+## Pointsiest
+The user selects which of two NBA players they think has the most points; a correct selection awards the user a point, while an incorrect selection awards the game a point.
 [Find the online repo here](https://www.github.com/skomer/pointsiest).
 
 ## Installation
