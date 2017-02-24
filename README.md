@@ -4,7 +4,7 @@ The user selects which of two NBA players they think has the most points; a corr
 [Find the online repo here](https://www.github.com/skomer/pointsiest).
 
 ## Installation
-Load the file 'app-debug.apk' on your Android device, then look for an app named 'Pointsiest'.
+Install the file [app-debug.apk](https://github.com/skomer/Pointsiest/blob/master/app-debug.apk) on your Android device, then look for an app named 'Pointsiest'.
 
 
 ## Challenges
